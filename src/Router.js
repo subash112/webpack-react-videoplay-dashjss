@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { history } from './history';
-import { Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Spinner from './Components/Spinner';
 import { ContextLayout } from './Context/Layout';
 

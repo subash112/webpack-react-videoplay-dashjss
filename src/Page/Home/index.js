@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { getList } from '../../Redux/Action/List';
 import { getMovies } from '../../Redux/Action/Movies';
 class Home extends React.Component {
@@ -14,7 +14,7 @@ class Home extends React.Component {
       <>
         <p>Hello Home</p>
         <p>
-          <Link to='/player'> Player</Link>
+          <NavLink to='/player'> Player</NavLink>
         </p>
       </>
     );
