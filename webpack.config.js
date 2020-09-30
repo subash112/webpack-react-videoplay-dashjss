@@ -9,7 +9,14 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, 'build'),
         compress: true,
-        port: 9000
+        port: 9000,
+        historyApiFallback: true
+    },
+    devtool: "source-map",
+    performance: {
+        maxEntrypointSize: 5120000,
+        maxAssetSize: 5120000,
+        hints: false
     },
     module: {
         rules: [
@@ -19,11 +26,26 @@ module.exports = {
                use: {
                     loader: "babel-loader",
                     options: {
-                    presets: [
-                        "@babel/preset-react", 
-                        "@babel/preset-env"
-                     ]}
-                   }
+                        presets: [
+                            "@babel/preset-react", 
+                            "@babel/preset-env"
+                        ],
+                        plugins: [
+                            '@babel/plugin-proposal-class-properties', 
+                            '@babel/plugin-transform-runtime',
+                            '@babel/plugin-syntax-dynamic-import'
+                        ]
+                    }
+                   },
+                rules: [
+                    {
+                        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+                        loader: 'url-loader',
+                        options: {
+                          limit: 10000
+                        }
+                      }
+                ]
              }]},
     plugins: [
         new HtmlWebpackPlugin(

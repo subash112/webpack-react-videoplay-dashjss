@@ -8,8 +8,7 @@ const instance = axios.create({
     device_identifier: 'web',
     locale: 'es',
     market_code: 'es',
-  },
-  httpAgent: agent,
+  }
 });
 
 export default instance;
