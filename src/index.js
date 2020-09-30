@@ -1,5 +1,25 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import '../src/Assets/Styles/index.scss';
+import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import Spinner from './Components/Spinner';
+import { Layout } from './Context/Layout';
+import { store } from './Redux/Store/Store';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const App = lazy(() => import('./App'));
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <Suspense fallback={<Spinner />}>
+        <Layout>
+          <App />
+        </Layout>
+      </Suspense>
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+serviceWorker.unregister();

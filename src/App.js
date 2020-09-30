@@ -1,4 +1,8 @@
+import React from 'react';
+import AppRouter from './Router';
+
 const App = () => {
-    return <h1 className= 'Hello'> Hello World</h1>;
+  return <AppRouter />;
 };
-    
+
+export default App;
