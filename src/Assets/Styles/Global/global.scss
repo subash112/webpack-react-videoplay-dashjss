@@ -1,0 +1,26 @@
+@import './variable';
+
+* {
+    font-family: 'NotoSans-Bold', Arial, sans-serif !important;
+  }
+
+  @mixin baseFontSize($font) {
+    // html {
+      font-size: #{$font}px !important;
+    // }
+  }
+
+body,
+html {
+  background: $background_color !important;
+}
+
+p {
+    color: $font_color;
+    transition: all 300ms ease-in-out;
+    font-size: baseFontSize(24);
+  
+    &:hover {
+      color: $border_color !important;
+    }
+}

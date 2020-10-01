@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import List from '../../Components/List';
 import { getList } from '../../Redux/Action/List';
 import { getMovies } from '../../Redux/Action/Movies';
 class Home extends React.Component {
@@ -16,6 +17,7 @@ class Home extends React.Component {
         <p>
           <NavLink to='/player'> Player</NavLink>
         </p>
+        <List/>
       </>
     );
   }
