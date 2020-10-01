@@ -7,7 +7,6 @@
     "build": "webpack --mode production",
     "development": "webpack --mode development",
     "start": "webpack-dev-server"
-
   },
   "keywords": [],
   "author": "subash timalsina",
@@ -25,7 +24,6 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "sass": "^1.26.11",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0"
   },
@@ -37,8 +35,11 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.11.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"

@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
 import '../src/Assets/Styles/index.scss';
-import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import Spinner from './Components/Spinner';
 import { Layout } from './Context/Layout';

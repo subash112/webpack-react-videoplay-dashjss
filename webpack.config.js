@@ -38,20 +38,17 @@ module.exports = {
                     }
                    },
              },
-            //  {
-            //     test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-            //     loader: 'url-loader',
-            //     options: {
-            //       limit: 10000
-            //     }
-            //   },
-            //   {
-            //     test: /\.scss$/i,
-            //     use: ['style-loader', 'css-loader'],
-            //     options: {
-            //         url: true,
-            //     },
-            //   }
+             {
+                test: /\.s[ac]ss$/i,
+                use: [
+                  // Creates `style` nodes from JS strings
+                  'style-loader',
+                  // Translates CSS into CommonJS
+                  'css-loader',
+                  // Compiles Sass to CSS
+                  'sass-loader',
+                ],
+              }
             ]
             },
 
