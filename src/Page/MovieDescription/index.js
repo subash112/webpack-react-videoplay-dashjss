@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import React from 'react'
 import Hero from '../../Components/Hero'
 import {getMovies} from '../../Redux/Action/Movies'
+import Description from '../../Components/Description'
 
 class MovieDescriptions extends React.Component {
     componentDidMount(){
@@ -13,7 +14,11 @@ class MovieDescriptions extends React.Component {
         return(
             <>
             {this.props.MovieDetails !==　null && 
-                <Hero {...this.props.MovieDetails}/> }
+            <>
+                <Hero {...this.props.MovieDetails}/> 
+                <Description {...this.props.MovieDetails}/>
+            </>
+            }
             </>
         )
     }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import instance from '../../Utils/axiosConfig'
-import MovieItem from '../MovieItem'
+import MovieItem from './MovieItem'
 
 const List  = props => {
     const [Movie, setMovie] = useState()

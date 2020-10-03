@@ -42,7 +42,7 @@ export default class AppRouter extends React.Component {
       <Router history={history}>
         <Switch>
           <PageLayout exact path='/' component={Home} List />
-          <PageLayout exact path='/player' component={Trailer} Player />
+          <PageLayout exact path='/stream/movie/:id' component={Trailer} Player />
           <PageLayout exact path='/movie/:id' component={MovieDescriptions} />
           <PageLayout exact path='*' component={NotFound} />
         </Switch>

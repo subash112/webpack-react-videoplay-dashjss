@@ -10,8 +10,9 @@ const Hero = props => {
                width: "auto",
                backgroundImage: `url(${props.images.snapshot})`
            }}>
-               <PlayButton/>
+            <PlayButton {...props}/>
             <AddToPlayList/>
+            <h1>{props.title}</h1>
            </div>
         </>
     )
