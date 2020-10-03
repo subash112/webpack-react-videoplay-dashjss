@@ -3,9 +3,11 @@ import { history } from './history';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Spinner from './Components/Spinner';
 import { ContextLayout } from './Context/Layout';
+import NotFound from './Page/404';
 
 const Home = lazy(() => import('./Page/Home'));
 const Trailer = lazy(() => import('./Page/Trailer'));
+const MovieDescriptions = lazy(() => import('./Page/MovieDescription'))
 
 const PageLayout = ({ component: Component, List, Player, ...rest }) => (
   <Route
@@ -41,7 +43,8 @@ export default class AppRouter extends React.Component {
         <Switch>
           <PageLayout exact path='/' component={Home} List />
           <PageLayout exact path='/player' component={Trailer} Player />
-          <PageLayout exact path='/movie:id' component={Trailer} />
+          <PageLayout exact path='/movie/:id' component={MovieDescriptions} />
+          <PageLayout exact path='*' component={NotFound} />
         </Switch>
       </Router>
     );

@@ -1,11 +1,13 @@
 import instance from '../../../Utils/axiosConfig';
 
-export const getList = () => {
+export const getList = (id) => {
   return async (dispatch) => {
     await instance
-      .get('v3/lists/estrenos-para-toda-la-familia')
+      .get(`v3/lists/${id}`)
       .then((response) => {
-        console.log(response);
+        if(response.status === 200){
+          dispatch({type: 'LIST_MOVIE_SUCCESS', data: response.data.data})
+        }
       })
       .catch((err) => {
         console.log(err);

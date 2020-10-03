@@ -4,8 +4,10 @@ const initialState = {
 
 const Movie = (state = initialState, action) => {
   switch (action.type) {
-    case 'GET_MOVIE_DETAIL_SUCCESS':
-      return state;
+    case 'GET_MOVIES_DETAILS':
+      return {
+        Details: action.payload.data
+      };
     default:
       return state;
   }

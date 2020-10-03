@@ -1,11 +1,14 @@
 import instance from '../../../Utils/axiosConfig';
 
-export const getMovies = () => {
+export const getMovies = (id) => {
   return async (dispatch) => {
     await instance
-      .get('v3/movies/la-fuerza-de-la-naturaleza')
+      .get(`v3/movies/${id}`)
       .then((response) => {
-        console.log(response);
+        dispatch({
+          type: 'GET_MOVIES_DETAILS',
+          payload: response.data
+        })
       })
       .catch((err) => {
         console.log(err);
