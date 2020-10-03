@@ -20,11 +20,17 @@ const List  = props => {
         {Movie !== undefined  && 
         <>
           <h2>{Movie.name}</h2>
-            {Movie.contents.data.map(item => (
-                <React.Fragment key = {item.id}>
-                      <MovieItem {...item}/>
-                </React.Fragment>
-            ))}
+            <div style = {{
+              overflow: 'hidden',
+              width: '100%',
+              height: '200px'
+            }}>
+              {Movie.contents.data.map(item => (
+                  <React.Fragment key = {item.id}>
+                            <MovieItem {...item}/>
+                  </React.Fragment>
+              ))}
+            </div>
         </>
         }
         </>

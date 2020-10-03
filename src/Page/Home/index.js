@@ -5,10 +5,6 @@ import MovieCategory from '../../Config/Category';
 import { getList } from '../../Redux/Action/List';
 import { getMovies } from '../../Redux/Action/Movies';
 class Home extends React.Component {
-  componentDidMount() {
-    // this.props.getMovies();
-  }
-
   render() {
     return (
       <>

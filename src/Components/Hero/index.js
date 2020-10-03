@@ -8,11 +8,18 @@ const Hero = props => {
            <div style = {{
                height: "30rem",
                width: "auto",
+               objectFit: 'contain',
                backgroundImage: `url(${props.images.snapshot})`
            }}>
-            <PlayButton {...props}/>
-            <AddToPlayList/>
-            <h1>{props.title}</h1>
+                <div style = {{textAlign: 'center'}}>
+                    <div style = {{
+                        display: 'inline'
+                    }}>
+                        <PlayButton {...props}/>
+                        <AddToPlayList/>
+                    </div>
+                    <h1>{props.title}</h1>
+                </div>
            </div>
         </>
     )
