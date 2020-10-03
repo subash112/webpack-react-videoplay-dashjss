@@ -1,5 +1,6 @@
 import React from 'react';
 import dashjs from 'dashjs';
+import Spinner from '../../Components/Spinner';
 
 export default class Trailer extends React.Component {
   state = {
@@ -37,7 +38,7 @@ export default class Trailer extends React.Component {
     return (
       <>
         <div className  = {playing ? 'display-none'  :  'display-block' }  >
-            <h1>Loading...</h1>
+            <Spinner/>
         </div>
 
         <video id='videoPlayer' 

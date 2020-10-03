@@ -10,7 +10,6 @@ class MovieDescriptions extends React.Component {
     }
 
     render(){
-        console.log(this.props.MovieDetails)
         return(
             <>
             {this.props.MovieDetails !==　null && 

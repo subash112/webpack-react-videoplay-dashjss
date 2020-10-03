@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import ImageLoading from '../../../Assets/Images/404.png'
 
 const MovieItem = props => {
-    console.log(props)
     return(
         <div style = {{
             float: "left",
