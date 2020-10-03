@@ -8,12 +8,11 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        {MovieCategory.map(item => (
-          <div key = {item.id}>
-            <List {...item} {...this.props}/>
-          </div>
-        ))}
-        
+          {MovieCategory.map(item => (
+            <div key = {item.id}>
+              <List {...item} {...this.props}/>
+            </div>
+          ))}
       </>
     );
   }

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Spinner from './Components/Spinner';
 import { ContextLayout } from './Context/Layout';
 import NotFound from './Page/404';
+import SliderTest from './Page/SliderTest';
 
 const Home = lazy(() => import('./Page/Home'));
 const Trailer = lazy(() => import('./Page/Trailer'));
@@ -44,6 +45,7 @@ export default class AppRouter extends React.Component {
           <PageLayout exact path='/' component={Home} List />
           <PageLayout exact path='/stream/movie/:id' component={Trailer} Player />
           <PageLayout exact path='/movie/:id' component={MovieDescriptions} />
+          <PageLayout exact path='/test' component={SliderTest} />
           <PageLayout exact path='*' component={NotFound} />
         </Switch>
       </Router>
