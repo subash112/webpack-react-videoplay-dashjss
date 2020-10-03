@@ -5,13 +5,17 @@ export const getMovies = (id) => {
     await instance
       .get(`v3/movies/${id}`)
       .then((response) => {
-        dispatch({
-          type: 'GET_MOVIES_DETAILS',
-          payload: response.data
-        })
+        if(response.status === 200){
+          dispatch({
+            type: 'GET_MOVIES_DETAILS_SUCCESS',
+            payload: response.data
+          })
+        }
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        dispatch({
+          type: 'GET_MOVIES_DETAILS_FAILS'
+        })
       });
   };
 };

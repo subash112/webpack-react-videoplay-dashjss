@@ -2,25 +2,15 @@ import React from 'react'
 
 const Description = props => {
     return(
-            <div>
-                <ul>
-                        <li>
-                            <span>
-                                <p>15</p>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <p>{props.duration} Minutes</p>
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                <p>{props.year}</p>
-                            </span>
-                        </li>
-                </ul>
-            <p>
+            <div style = {{
+                padding: '1rem',
+                textAlign: "center"
+            }}>
+                <h2>Description</h2>
+            <p style = {{
+                // width : '90%'
+                padding: '1rem'
+            }}>
                 {props.plot}
             </p>
 

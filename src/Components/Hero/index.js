@@ -1,26 +1,27 @@
 import React from 'react'
 import PlayButton from './PlayButton'
-import AddToPlayList from './addToPlayList'
 
 const Hero = props => {
     return(
         <>
            <div style = {{
-               height: "30rem",
-               width: "auto",
-               objectFit: 'contain',
-               backgroundImage: `url(${props.images.snapshot})`
+               backgroundSize: 'contain',
+               backgroundSize: `${window.innerWidth}px ${window.innerHeight}px`,
+               backgroundRepeat: 'no-repeat',
+               backgroundImage: `url(${props.images.snapshot})`,
+               opacity: 0.6
            }}>
                 <div style = {{textAlign: 'center'}}>
                     <div style = {{
-                        display: 'inline'
+                        display: 'inline-block',
+                        padding: '7rem'
                     }}>
                         <PlayButton {...props}/>
-                        <AddToPlayList/>
+                        <p>Trailer</p> 
                     </div>
-                    <h1>{props.title}</h1>
+                    <h1 style = {{padding: '4rem'}}>{props.title}</h1>
                 </div>
-           </div>
+            </div>
         </>
     )
 }
