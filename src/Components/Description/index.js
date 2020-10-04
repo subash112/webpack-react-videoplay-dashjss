@@ -2,18 +2,11 @@ import React from 'react'
 
 const Description = props => {
     return(
-            <div style = {{
-                padding: '1rem',
-                textAlign: "center"
-            }}>
+            <div className = "text-align-center p-1">
                 <h2>Description</h2>
-            <p style = {{
-                // width : '90%'
-                padding: '1rem'
-            }}>
+            <p className = 'p-1'>
                 {props.plot}
             </p>
-
             </div>
     )
 }

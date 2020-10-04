@@ -8,7 +8,7 @@ const MovieItem = props => {
             <Link to = {`/movie/${props.id}`}>
                 <img style = {{
                     backgroundImage: `url(${ImageLoading})`,
-                    width:  "170px",
+                    width:  "140px",
                     height: '200px',
                     objectFit: 'cover'
                 }} className = "movie-banner"  src = {props.images.artwork} alt = "Movie Image"/>

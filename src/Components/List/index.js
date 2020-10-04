@@ -7,7 +7,7 @@ const List  = props => {
     const [SliderData, setSliderData] = useState([])
     const [HighRange, setHighRange] = useState(0)
     const [LowRange, setLowRange] = useState(0)
-    const [MovieUnits, setMovieUnits] = useState((window.innerWidth  >= 480 && window.innerWidth < 767) ? 2 : (window.innerWidth  >= 767 && window.innerWidth < 1200) ? 4 : 7  )
+    const [MovieUnits, setMovieUnits] = useState((window.innerWidth  >= 320 && window.innerWidth < 767) ? 2 : (window.innerWidth  >= 767 && window.innerWidth < 1200) ? 4 : 8  )
     
     useEffect( () => {
         instance
@@ -21,6 +21,7 @@ const List  = props => {
     }, [])
 
     const PrepareData = (movie, lowRange, highRange) => {
+      console.log(MovieUnits)
       var LowRanges, HighRanges;
       if(lowRange === undefined && highRange === undefined){
         LowRanges = 0
@@ -31,13 +32,13 @@ const List  = props => {
       }
       setHighRange(HighRanges)
       setLowRange(LowRanges)
-
+      console.log(lowRange, highRange)
       var data   = []
       for(let i = LowRanges ; i >= LowRanges && i < HighRanges ; i++ ){
           data.push(movie.contents.data[i])
       }
+
       setSliderData(data)
-      console.log(data)
     }
 
     return (

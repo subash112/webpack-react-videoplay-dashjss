@@ -5,21 +5,17 @@ const Hero = props => {
     return(
         <>
            <div style = {{
-               backgroundSize: 'contain',
-               backgroundSize: `${window.innerWidth}px ${window.innerHeight}px`,
-               backgroundRepeat: 'no-repeat',
+               backgroundSize: 'cover',
+            //    backgroundSize: `${window.innerWidth}px ${window.innerHeight}px`,
                backgroundImage: `url(${props.images.snapshot})`,
                opacity: 0.6
            }}>
-                <div style = {{textAlign: 'center'}}>
-                    <div style = {{
-                        display: 'inline-block',
-                        padding: '7rem'
-                    }}>
+                <div className = 'text-align-center'>
+                    <div className = 'p-7 display-inline-block'>
                         <PlayButton {...props}/>
                         <p>Trailer</p> 
                     </div>
-                    <h1 style = {{padding: '4rem'}}>{props.title}</h1>
+                    <h1 className = 'p-4'>{props.title}</h1>
                 </div>
             </div>
         </>

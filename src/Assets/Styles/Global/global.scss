@@ -31,7 +31,7 @@ html {
 p, h2, h1 {
     color: $font_color;
     transition: all 300ms ease-in-out;
-    font-size: baseFontSize(24);
+    font-size: 24;
   
     &:hover {
       color: $border_color !important;
@@ -52,6 +52,24 @@ p, h2, h1 {
 
 .m-1 {
   margin: 1rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+.p-7 {
+  padding: 7rem;
+}
+.p-4 {
+  padding: 4rem;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.display-inline-block {
+  display: inline-block;
 }
 
 
