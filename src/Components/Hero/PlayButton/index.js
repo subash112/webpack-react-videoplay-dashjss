@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import playIcon from '../../../Assets/Images/play_icon.png'
+import './PlayButton.scss'
 
 const PlayButton = props => {
     return(

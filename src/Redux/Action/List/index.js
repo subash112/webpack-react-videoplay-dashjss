@@ -10,7 +10,7 @@ export const getList = (id) => {
         }
       })
       .catch((err) => {
-        console.log(err);
+        dispatch({type: 'LIST_MOVIE_SUCCESS_ERROR'})
       });
   };
 };

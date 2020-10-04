@@ -1,15 +1,15 @@
 .list {
-    @include height(15rem);
-    @include width(100%);
-    @include overflow(hidden);
+    height:  15rem;
+    width:  100%;
+    overflow: hidden;
  }
 
  .arrow {
-     @include height(14px);
-     @include width(14px);
-    border: solid $font_color;
+    height: 14px;
+    width:  14px;
+    border: solid #F7F7F7;
     border-width: 0 3px 3px 0;
-    @include display(inline-block);
+    display: inline-block;
     padding: 3px;
   }
   

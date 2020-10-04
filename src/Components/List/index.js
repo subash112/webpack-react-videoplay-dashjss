@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import instance from '../../Utils/axiosConfig'
 import MovieItem from './MovieItem'
+import './list.scss'
 
 const List  = props => {
     const [Movie, setMovie] = useState()
@@ -21,7 +22,6 @@ const List  = props => {
     }, [])
 
     const PrepareData = (movie, lowRange, highRange) => {
-      console.log(MovieUnits)
       var LowRanges, HighRanges;
       if(lowRange === undefined && highRange === undefined){
         LowRanges = 0
@@ -32,7 +32,6 @@ const List  = props => {
       }
       setHighRange(HighRanges)
       setLowRange(LowRanges)
-      console.log(lowRange, highRange)
       var data   = []
       for(let i = LowRanges ; i >= LowRanges && i < HighRanges ; i++ ){
           data.push(movie.contents.data[i])

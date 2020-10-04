@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { HotModuleReplacementPlugin } = require('webpack');
 var path = require('path');
 
 
@@ -42,11 +43,8 @@ module.exports = {
              {
                 test: /\.s[ac]ss$/i,
                 use: [
-                  // Creates `style` nodes from JS strings
                   'style-loader',
-                  // Translates CSS into CommonJS
                   'css-loader',
-                  // Compiles Sass to CSS
                   'sass-loader',
                 ],
               },
@@ -65,9 +63,13 @@ module.exports = {
             },
 
     plugins: [
+        new HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin(
             {
-                template: "./public/index.html"
+                template: "./public/index.html",
+                favicon: false,
+                showErrors: true,
+                cache: true,
              })
           ]
 };

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ImageLoading from '../../../Assets/Images/404.png'
+import './MovieItem.scss'
 
 const MovieItem = props => {
     return(
