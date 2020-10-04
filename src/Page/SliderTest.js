@@ -1,4 +1,5 @@
 import React from 'react'
+import Slider from '../Components/Slider'
 import ContextSlider  from '../Context/Slider'
 
 class Test extends React.Component{
@@ -19,6 +20,7 @@ export default class SliderTest extends React.Component{
             <>
                 <ContextSlider.Provider value = {{name: "subash"}}>
                     <Test/>
+                    <Slider/>
                 </ContextSlider.Provider>
             </>
         )

@@ -19,35 +19,16 @@ const List  = props => {
         <> 
         {Movie !== undefined  && 
         <>
-
           <h2>{Movie.name}</h2>
-          <div className = 'arrow right' style = {{
-                float: 'right',
-                position: 'relative',
-                top: 100,
-                left: 0,
-                cursor: 'pointer'
-              }}> </div>
-
-            <div style = {{
-              overflow: 'hidden',
-              width: '100%',
-              height: '200px',
-            }}>
+          <div className = 'arrow right float-right cursor-pointer '> </div>
+            <div className = 'list'>
               {Movie.contents.data.map(item => (
                   <React.Fragment key = {item.id}>
                             <MovieItem {...item}/>
                   </React.Fragment>
               ))}
             </div>
-
-            <div className = 'arrow left' style = {{
-                // float: 'left',
-                position: 'relative',
-                top: -120,
-                left: 0,
-                cursor: 'pointer',
-              }}></div>
+            <div className = 'arrow left float-left cursor-pointer arrow-position'></div>
         </>
         }
         </>

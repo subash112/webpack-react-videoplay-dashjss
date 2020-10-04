@@ -1,0 +1,32 @@
+.list {
+    @include height(15rem);
+    @include width(100%);
+    @include overflow(hidden);
+ }
+
+ .arrow {
+     @include height(14px);
+     @include width(14px);
+    border: solid $font_color;
+    border-width: 0 3px 3px 0;
+    @include display(inline-block);
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    position: relative;
+    top: 100px;
+    left: 0;
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: relative;
+    top: -130px;
+    left: 0;
+  }
+
+
