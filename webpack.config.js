@@ -47,6 +47,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
+              publicPath: 'https://images-2.wuaki.tv/'
             },
           },
         ],
