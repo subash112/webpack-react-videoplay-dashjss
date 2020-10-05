@@ -26,16 +26,32 @@
 body,
 html {
   background: $background_color !important;
+  margin: 0.5rem;
 }
 
 p, h2, h1 {
     color: $font_color;
     transition: all 300ms ease-in-out;
-    font-size: 24;
+    font-size: 24px;
   
     &:hover {
       color: $border_color !important;
     }
+
+    @media screen and (max-width: $small) {
+      font-size: 40px !important;
+    }
+    @media screen and (max-width: $medium) {
+        font-size: 35px !important;
+    }
+}
+img {
+  @media screen and (max-width: $small) {
+      width: 100px !important;
+  }
+  @media screen and (max-width: $medium) {
+      width: 120px !important;
+  }
 }
 
 .cursor-pointer {
