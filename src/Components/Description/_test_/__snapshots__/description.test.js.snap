@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="text-align-center p-1"
+>
+  <h2>
+    Description
+  </h2>
+  <p
+    className="p-1"
+    data-testid="description"
+  >
+    This is an description section
+  </p>
+</div>
+`;

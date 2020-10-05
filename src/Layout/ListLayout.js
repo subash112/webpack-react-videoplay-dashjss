@@ -7,7 +7,7 @@ export default class ListLayout extends React.Component {
     return (
       <>
         {/* <Header /> */}
-          {this.props.children}
+        {this.props.children}
         {/* <Footer /> */}
       </>
     );

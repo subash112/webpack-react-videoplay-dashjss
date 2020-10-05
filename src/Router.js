@@ -6,7 +6,7 @@ import NotFound from './Page/404';
 
 const Home = lazy(() => import('./Page/Home'));
 const Trailer = lazy(() => import('./Page/Trailer'));
-const MovieDescriptions = lazy(() => import('./Page/MovieDescription'))
+const MovieDescriptions = lazy(() => import('./Page/MovieDescription'));
 
 const PageLayout = ({ component: Component, List, Player, ...rest }) => (
   <Route
@@ -41,7 +41,12 @@ export default class AppRouter extends React.Component {
       <Router>
         <Switch>
           <PageLayout exact path='/' component={Home} List />
-          <PageLayout exact path='/stream/movie/:id' component={Trailer} Player />
+          <PageLayout
+            exact
+            path='/stream/movie/:id'
+            component={Trailer}
+            Player
+          />
           <PageLayout exact path='/movie/:id' component={MovieDescriptions} />
           <PageLayout exact path='*' component={NotFound} />
         </Switch>

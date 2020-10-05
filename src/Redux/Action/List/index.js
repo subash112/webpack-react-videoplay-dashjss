@@ -5,12 +5,12 @@ export const getList = (id) => {
     await instance
       .get(`v3/lists/${id}`)
       .then((response) => {
-        if(response.status === 200){
-          dispatch({type: 'LIST_MOVIE_SUCCESS', data: response.data.data})
+        if (response.status === 200) {
+          dispatch({ type: 'LIST_MOVIE_SUCCESS', data: response.data.data });
         }
       })
       .catch((err) => {
-        dispatch({type: 'LIST_MOVIE_SUCCESS_ERROR'})
+        dispatch({ type: 'LIST_MOVIE_SUCCESS_ERROR' });
       });
   };
 };
