@@ -11,16 +11,15 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-// it('renders correctly', () => {
-//   const { getByTestId } = render(
-//     <List id = 'estrenos-imprescindibles-en-taquilla' />
-//   );
-//   expect(getByTestId('List').toContainObject({ type: 'START' }))
-// })
+it('renders correctly', () => {
+  const { getByTestId } = render(
+    <List id = 'estrenos-imprescindibles-en-taquilla' />
+  );
+})
 
-// it('matches snapshot', () => {
-//   const tree = TestRenderer.create(
-//     <Description plot='This is an description section' />
-//   ).toJSON();
-//   expect(tree).toMatchSnapshot();
-// });
+it('matches snapshot', () => {
+  const tree = TestRenderer.create(
+    <List id = 'estrenos-imprescindibles-en-taquilla' />
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
+});

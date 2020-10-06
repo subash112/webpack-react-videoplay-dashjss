@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
+const Dotenv = require('dotenv-webpack');
 var path = require('path');
 
 module.exports = {
@@ -56,12 +57,16 @@ module.exports = {
   },
 
   plugins: [
+    new Dotenv({
+      path: './.env',
+      safe: true
+    }),
     new HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       favicon: false,
       showErrors: true,
       cache: true,
-    }),
+    })
   ],
 };
