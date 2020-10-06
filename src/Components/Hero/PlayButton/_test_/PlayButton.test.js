@@ -12,26 +12,28 @@ it('renders without crashing', () => {
   ReactDOM.render(
     <BrowserRouter>
       <PlayButton />
-    </BrowserRouter>, 
-  div);
+    </BrowserRouter>,
+    div
+  );
   ReactDOM.unmountComponentAtNode(div);
 });
 
 it('renders correctly', () => {
-    const {getByTestId} = render(
-        <BrowserRouter>
-          <PlayButton id = "Movie-to-test"/>
-        </BrowserRouter>
-      )
-    expect(getByTestId("PlayButton").getAttribute("href")).toBe(
-        "/stream/movie/Movie-to-test")
-
-})
+  const { getByTestId } = render(
+    <BrowserRouter>
+      <PlayButton id='Movie-to-test' />
+    </BrowserRouter>
+  );
+  expect(getByTestId('PlayButton').getAttribute('href')).toBe(
+    '/stream/movie/Movie-to-test'
+  );
+});
 
 it('matches snapshot', () => {
-    const tree = TestRenderer.create(
+  const tree = TestRenderer.create(
     <BrowserRouter>
-        <PlayButton id = "Movie-to-test"/>
-    </BrowserRouter>).toJSON();
-    expect(tree).toMatchSnapshot();
-})
+      <PlayButton id='Movie-to-test' />
+    </BrowserRouter>
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
+});

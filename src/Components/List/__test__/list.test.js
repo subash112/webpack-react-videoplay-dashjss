@@ -13,13 +13,13 @@ it('renders without crashing', () => {
 
 it('renders correctly', () => {
   const { getByTestId } = render(
-    <List id = 'estrenos-imprescindibles-en-taquilla' />
+    <List id='estrenos-imprescindibles-en-taquilla' />
   );
-})
+});
 
 it('matches snapshot', () => {
   const tree = TestRenderer.create(
-    <List id = 'estrenos-imprescindibles-en-taquilla' />
+    <List id='estrenos-imprescindibles-en-taquilla' />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

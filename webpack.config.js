@@ -57,16 +57,16 @@ module.exports = {
   },
 
   plugins: [
-    new Dotenv({
-      path: './.env',
-      safe: true
-    }),
     new HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       favicon: false,
       showErrors: true,
       cache: true,
+    }),
+    new Dotenv({
+      path: './.env',
+      safe: true,
     })
   ],
 };

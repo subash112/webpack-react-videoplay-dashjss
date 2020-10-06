@@ -62,11 +62,10 @@ const List = (props) => {
                 let lowRange = HighRange;
                 PrepareData(Movie, lowRange, highRange);
               }}
-            >
-            </div>
+            ></div>
           )}
 
-          <div className='list' data-testid = "List">
+          <div className='list' data-testid='List'>
             {SliderData.map((item) => (
               <React.Fragment key={item.id}>
                 <MovieItem {...item} />
